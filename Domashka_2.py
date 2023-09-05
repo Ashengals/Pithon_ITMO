@@ -49,6 +49,26 @@ print(sravn(a,b))
 print('Задание_5')
 
 
+def columns(kub, k):
+    if kub == 0:
+        return 1
+    pr = 0
+    for i in range(k + 1, kub + 1):
+        pr = pr+ columns(kub - i, i)
+    return pr
+
+kub = 0
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 1
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 3
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 6
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 100
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+
+
 # Задание_6
 print('Задание_6')
 
@@ -87,8 +107,6 @@ proiz(a)
 
 # Задание_7
 print('Задание_7')
-
-
 
 def proverka(fn):
     def wrapper(*args):
@@ -153,7 +171,37 @@ print(v)
 # Задание_9
 print('Задание_9')
 
+import time
 
+def time_f(fn):
+    def wrapper(*args):
+        na4alo=time.time()
+        result=fn(*args)
+        end_t=time.time()
+        tau=end_t-na4alo
+        print(f'Время выполнения программы:{tau} секунд')
+        return result
+    return wrapper
+
+
+@time_f
+def itog():
+    sum_1=0
+    for i in range(10000000):
+        sum_1 = sum_1 + i
+    return sum_1
+
+@time_f
+def proiz():
+    sum_2=1
+    for i in range(10000000):
+        sum_2=sum_2*i
+    return sum_2
+
+
+
+itog()
+proiz()
 
 
 

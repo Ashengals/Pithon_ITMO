@@ -49,6 +49,26 @@ print(sravn(a,b))
 print('Задание_5')
 
 
+def columns(kub, k):
+    if kub == 0:
+        return 1
+    pr = 0
+    for i in range(k + 1, kub + 1):
+        pr = pr+ columns(kub - i, i)
+    return pr
+
+kub = 0
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 1
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 3
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 6
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+kub = 100
+print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
+
+
 # Задание_6
 print('Задание_6')
 
@@ -87,8 +107,6 @@ proiz(a)
 
 # Задание_7
 print('Задание_7')
-
-
 
 def proverka(fn):
     def wrapper(*args):
@@ -184,3 +202,8 @@ def proiz():
 
 itog()
 proiz()
+
+
+
+
+
