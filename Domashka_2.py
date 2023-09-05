@@ -153,34 +153,9 @@ print(v)
 # Задание_9
 print('Задание_9')
 
-import time
-
-def time_f(fn):
-    def wrapper(*args):
-        na4alo=time.time()
-        result=fn(*args)
-        end_t=time.time()
-        tau=end_t-na4alo
-        print(f'Время выполнения программы:{tau} секунд')
-        return result
-    return wrapper
-
-
-@time_f
-def itog():
-    sum_1=0
-    for i in range(10000000):
-        sum_1 = sum_1 + i
-    return sum_1
-
-@time_f
-def proiz():
-    sum_2=1
-    for i in range(10000000):
-        sum_2=sum_2*i
-    return sum_2
 
 
 
-itog()
-proiz()
+
+
+
