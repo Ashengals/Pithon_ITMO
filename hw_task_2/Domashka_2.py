@@ -52,10 +52,10 @@ print('Задание_5')
 def columns(kub, k):
     if kub == 0:
         return 1
-    pr = 0
+    lest = 0
     for i in range(k + 1, kub + 1):
-        pr = pr+ columns(kub - i, i)
-    return pr
+        lest = lest+ columns(kub - i, i)
+    return lest
 
 kub = 0
 print(f'Для {kub} кубиков получается {columns(kub,0)} лестниц')
