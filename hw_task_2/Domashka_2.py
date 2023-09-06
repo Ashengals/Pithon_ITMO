@@ -50,6 +50,8 @@ print('Задание_5')
 
 
 def columns(kub, k):
+    if kub<1 and k==0:
+        return 0
     if kub == 0:
         return 1
     lest = 0
