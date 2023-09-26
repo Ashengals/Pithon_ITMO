@@ -64,4 +64,4 @@ print(f'Четвертый:{obj_stud4.knowledge}')
 
 print(f'Обучил:{obj_teach.kolvo}')
 
-#Задание 3
+
