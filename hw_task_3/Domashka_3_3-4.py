@@ -63,3 +63,7 @@ print(f'Четвертый:{obj_stud4.knowledge}')
 print(f'Обучил:{obj_teach.kolvo}')
 
 print(len(obj_stud1))
+
+
+#Задание 4
+
