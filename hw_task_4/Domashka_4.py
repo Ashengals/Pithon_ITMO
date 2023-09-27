@@ -19,8 +19,18 @@ b=np.ones((4,2))
 print(np.dot(a,b))
 
 # Задание 4
+st=0
+mas=np.array(range(10), float)
+while st<10:
+    ran = np.random.random()
+    if ran!=0 or ran!=1:
+        mas[st]=ran
+        st=st+1
 
-st=0.00000001
-en=0.99999999
-ran = np.random.randint(low=st, high=en, size=10 )
-print(ran)
+print(mas)
+
+
+# Задание 5
+
+# def matrix(kolvo):
+
