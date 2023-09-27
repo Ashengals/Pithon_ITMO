@@ -32,5 +32,17 @@ print(mas)
 
 # Задание 5
 
-# def matrix(kolvo):
+def matrix(number):
+    spis = list()
+    for i in range(2, number):
+        if number % i ==0:
+            spis.append(i)
+    if len(spis)==0:
+        return print ("число простое")
+    print(spis)
+    for i in range(0,len(spis)):
+        for j in range(0,len(spis)):
+            mat=np.ones((spis[i],spis[j]))
+            print(mat)
 
+matrix(6)
