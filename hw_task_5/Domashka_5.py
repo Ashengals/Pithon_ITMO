@@ -14,12 +14,16 @@ f1=frame
 num=5
 print(f1.loc[(f1[0]>num)&(f1[1]>num)&(f1[2]>num)&(f1[3]>num)&(f1[4]>num)&(f1[5]>num)&(f1[6]>num)&(f1[7]>num)&(f1[8]>num)&(f1[9]>num)])
 print("\n")
+
+
 # Задание 3
 fr1= pd.DataFrame(np.random.randint(5,10, size=(10,10)), index=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"], columns=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"])
 print (fr1)
 print('Razmernost:', fr1.shape)
 print("\n")
 print(list(fr1))
+print("\n")
+print("Srednee:",fr1.mean(axis=0).sum(axis=0)/10)
 print("\n")
 fr1.to_csv('fr1.csv')
 print("File save")
