@@ -21,7 +21,7 @@ cat_em("No_cat")
 def fn(a,b):
     df = pd.read_csv('BCT-USD.csv').set_index('Date')
     vybor= df.loc[a:b,['Open', 'Close']]
-    print(vybor)
+
     plt.plot(vybor)
     plt.savefig('vybor.jpg')
 
