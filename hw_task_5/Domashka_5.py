@@ -28,7 +28,11 @@ print("\n")
 fr1.to_csv('fr1.csv')
 print("File save")
 # Задание 4
-
+dfr= pd.read_csv('emojis.csv', sep=',', header=0, index_col='Subcategory')
+# print(dfr.iloc[0])
+sub_dfr=pd.DataFrame(dfr.groupby('Subcategory')['Rank'].sum())
+res=sub_dfr.sort_values(['Rank'], ascending= False).head(1)
+print(res)
 
 # Задание 5
 
