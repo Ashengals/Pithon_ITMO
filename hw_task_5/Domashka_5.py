@@ -38,16 +38,7 @@ print(res)
 
 # Задание 5
 
-plt.plot(dfr.groupby("Year")["Year"].count())
-plt.savefig("god.jpg")
-print("File save")
+plt.plot(dfr.groupby('Year')['Year'].count())
+plt.savefig('god.jpg')
+print('File save')
 
-# Задание 6
-
-
-# Задание 7
-
-
-# Задание 8
-
-# Задание 9
