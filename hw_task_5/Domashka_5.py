@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 frame= pd.DataFrame(np.random.randint(5,10, size=(10,10)))
 print(frame,"\n")
@@ -27,6 +28,7 @@ print("Srednee:",fr1.mean(axis=0).sum(axis=0)/10)
 print("\n")
 fr1.to_csv('fr1.csv')
 print("File save")
+
 # Задание 4
 dfr= pd.read_csv('emojis.csv', sep=',', header=0, index_col='Subcategory')
 # print(dfr.iloc[0])
@@ -35,6 +37,10 @@ res=sub_dfr.sort_values(['Rank'], ascending= False).head(1)
 print(res)
 
 # Задание 5
+
+plt.plot(dfr.groupby("Year")["Year"].count())
+plt.savefig("god.jpg")
+print("File save")
 
 # Задание 6
 
