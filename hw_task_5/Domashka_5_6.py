@@ -18,7 +18,14 @@ cat_em("No_cat")
 
 # Задание 7
 
+def fn(a,b):
+    df = pd.read_csv('BCT-USD.csv').set_index('Date')
+    vybor= df.loc[a:b,['Open', 'Close']]
+    print(vybor)
+    plt.plot(vybor)
+    plt.savefig('vybor.jpg')
 
+fn('2021-10-21', '2021-10-24')
 # Задание 8
 
 # Задание 9
