@@ -5,8 +5,8 @@ import numpy as np
 
 np.set_printoptions(precision=2, floatmode='fixed', suppress=True)
 dataset = np.genfromtxt('data.txt', delimiter=',', dtype=float)
-for i in range(len (dataset[0])-1):
-    dataset = dataset[~np.isnan(dataset[:,i])]
+# for i in range(len (dataset[0])-1):
+#     dataset = dataset[~np.isnan(dataset[:,i])]
 
 dataset=np.around(dataset,2)
 
