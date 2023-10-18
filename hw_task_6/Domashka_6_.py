@@ -14,13 +14,13 @@ Y=dataset[:,-1]
 X=dataset[:,:7]
 
 model=Sequential()
-model.add(Dense(12, input_dim=9, activation='relu'))
+model.add(Dense(12, input_dim=7, activation='relu'))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics='accuracy')
-model.fit(X,Y, epochs=15, batch_size=10, verbose=2)
+model.fit(X, Y, epochs=15, batch_size=10, verbose=2)
 
 print('Predskzanie:')
 predictions_0 = model.predict(np.array(X[:3]))
